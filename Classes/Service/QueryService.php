@@ -36,12 +36,13 @@ class QueryService
     {
         $query = $this->getQuery($queryUid);
         $table = $query['affected_table'];
-        $where = $this->queryParser->parse(json_decode($query['where_parts']), $table);
+        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable($table);
 
-        return GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable($table)
+        $queryBuilder = $this->queryParser->parse(json_decode($query['where_parts']), $queryBuilder);
+
+        return $queryBuilder
             ->select('*')
             ->from($table)
-            ->where($where)
             ->execute()
             ->fetchAll();
     }
