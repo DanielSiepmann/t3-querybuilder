@@ -186,3 +186,11 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['formEngine']['formDataGroup']['tcaOnly'] = a
         ),
     ),
 );
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    'T3G.' . $_EXTKEY,
+    'queryresult',
+    [
+        'Frontend' => 'result',
+    ]
+);

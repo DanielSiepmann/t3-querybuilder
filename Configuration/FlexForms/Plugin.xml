@@ -1,0 +1,25 @@
+<T3DataStructure>
+    <sheets>
+        <settings>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Plugin Options</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.query>
+                        <TCEforms>
+                            <label>Query</label>
+                            <config>
+                                <type>select</type>
+                                <foreign_table>sys_querybuilder</foreign_table>
+                                <minitems>1</minitems>
+                                <manitems>1</manitems>
+                            </config>
+                        </TCEforms>
+                    </settings.query>
+                </el>
+            </ROOT>
+        </settings>
+    </sheets>
+</T3DataStructure>

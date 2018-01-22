@@ -1,0 +1,8 @@
+<f:for each="{result}" as="record">
+    <div class="id-{record.uid}">
+        <h3>{record.header}</h3>
+        <f:if condition="{record.bodytext}">
+            {record.bodytext -> f:format.html()}
+        </f:if>
+    </div>
+</f:for>

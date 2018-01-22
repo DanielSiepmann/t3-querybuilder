@@ -7,6 +7,7 @@ return [
         'enablecolumns' => [
             'disabled' => 'hidden',
         ],
+        'rootLevel' => true,
         'iconfile' => 'EXT:querybuilder/Resources/Public/Icons/search.svg',
     ],
     'types' => [
